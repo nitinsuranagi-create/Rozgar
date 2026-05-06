@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ROZGAR Design System — Rural India earthy modern theme. All colors HSL. */
+
+@layer base {
+  :root {
+    --background: 40 33% 96%;            /* off-white cream */
+    --foreground: 30 25% 15%;            /* deep brown ink */
+
+    --card: 40 40% 99%;
+    --card-foreground: 30 25% 15%;
+
+    --popover: 40 40% 99%;
+    --popover-foreground: 30 25% 15%;
+
+    --primary: 95 35% 28%;               /* olive forest green */
+    --primary-foreground: 40 40% 98%;
+    --primary-glow: 88 40% 45%;
+
+    --secondary: 30 35% 88%;             /* warm beige */
+    --secondary-foreground: 30 30% 20%;
+
+    --muted: 36 25% 90%;
+    --muted-foreground: 30 15% 40%;
+
+    --accent: 22 70% 48%;                /* terracotta */
+    --accent-foreground: 40 40% 98%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 40 40% 98%;
+
+    --success: 130 45% 35%;
+    --warning: 38 90% 50%;
+
+    --border: 32 25% 82%;
+    --input: 32 25% 82%;
+    --ring: 95 35% 28%;
+
+    --radius: 0.75rem;
+
+    --gradient-warm: linear-gradient(135deg, hsl(22 70% 48%), hsl(38 80% 55%));
+    --gradient-field: linear-gradient(135deg, hsl(95 35% 28%), hsl(88 40% 45%));
+    --gradient-hero: linear-gradient(180deg, hsl(40 60% 95%), hsl(36 50% 88%));
+
+    --shadow-soft: 0 4px 20px -8px hsl(30 30% 30% / 0.18);
+    --shadow-warm: 0 10px 30px -12px hsl(22 70% 48% / 0.35);
+
+    --sidebar-background: 36 30% 94%;
+    --sidebar-foreground: 30 25% 20%;
+    --sidebar-primary: 95 35% 28%;
+    --sidebar-primary-foreground: 40 40% 98%;
+    --sidebar-accent: 30 35% 88%;
+    --sidebar-accent-foreground: 30 30% 20%;
+    --sidebar-border: 32 25% 82%;
+    --sidebar-ring: 95 35% 28%;
+  }
+
+  .dark {
+    --background: 30 15% 10%;
+    --foreground: 40 30% 92%;
+    --card: 30 18% 13%;
+    --card-foreground: 40 30% 92%;
+    --popover: 30 18% 13%;
+    --popover-foreground: 40 30% 92%;
+    --primary: 88 40% 55%;
+    --primary-foreground: 30 25% 10%;
+    --secondary: 30 15% 20%;
+    --secondary-foreground: 40 30% 92%;
+    --muted: 30 15% 18%;
+    --muted-foreground: 36 15% 65%;
+    --accent: 22 70% 55%;
+    --accent-foreground: 30 25% 10%;
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 40 30% 92%;
+    --border: 30 15% 22%;
+    --input: 30 15% 22%;
+    --ring: 88 40% 55%;
+    --sidebar-background: 30 18% 12%;
+    --sidebar-foreground: 40 30% 92%;
+    --sidebar-primary: 88 40% 55%;
+    --sidebar-primary-foreground: 30 25% 10%;
+    --sidebar-accent: 30 15% 20%;
+    --sidebar-accent-foreground: 40 30% 92%;
+    --sidebar-border: 30 15% 22%;
+    --sidebar-ring: 88 40% 55%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    background-image:
+      radial-gradient(at 0% 0%, hsl(var(--secondary) / 0.4) 0, transparent 50%),
+      radial-gradient(at 100% 100%, hsl(var(--primary) / 0.06) 0, transparent 50%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4 { font-family: 'Fraunces', 'Playfair Display', Georgia, serif; letter-spacing: -0.02em; }
+}
+
+@layer utilities {
+  .bg-gradient-warm { background-image: var(--gradient-warm); }
+  .bg-gradient-field { background-image: var(--gradient-field); }
+  .bg-gradient-hero { background-image: var(--gradient-hero); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-warm { box-shadow: var(--shadow-warm); }
+  .rural-pattern {
+    background-image: radial-gradient(hsl(var(--primary) / 0.08) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+}

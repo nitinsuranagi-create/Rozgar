@@ -1,0 +1,29 @@
+# ----------------------
+# Python / Django
+# ----------------------
+venv/
+__pycache__/
+*.pyc
+db.sqlite3
+
+# Env files (CRITICAL)
+.env
+backend/.env
+
+# ----------------------
+# Node / React
+# ----------------------
+node_modules/
+dist/
+build/
+
+# ----------------------
+# Logs
+# ----------------------
+*.log
+
+# ----------------------
+# IDE
+# ----------------------
+.vscode/
+.idea/
